@@ -1,6 +1,5 @@
 from deq_stack import Stack
 
-
 def check_brackets(filename, output_filename):
     stack = Stack()  # инициализация стека
     with open(filename, 'r', encoding='utf-8') as file:
@@ -22,7 +21,6 @@ def check_brackets(filename, output_filename):
             output_file.write("Скобки несбалансированы")
 
     return balanced
-
 
 filename = 'alg.txt'  # имя текстового файла с программой
 output_filename = 'brackets_balance_result.txt'  # имя файла для записи результата
