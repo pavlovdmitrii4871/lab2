@@ -1,6 +1,5 @@
 from deq_stack import Dequeue
 
-
 def pop_min(deq):
     min_element = deq.pop_first()
     l = len(deq)
@@ -15,7 +14,6 @@ def pop_min(deq):
             deq.push_last(el)
     return min_element
 
-
 def sort_books(books):
     deq = Dequeue()
     sort_deq = Dequeue()
@@ -25,8 +23,7 @@ def sort_books(books):
         sort_deq.push_first(pop_min(deq))
     return sort_deq
 
-
-# Укажите путь к файлу с названиями книг
+# Указание пути к файлу
 input_file_path = "books.txt"
 output_file_path = "sorted_books.txt"
 
