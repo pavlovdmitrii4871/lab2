@@ -29,9 +29,9 @@ def check_brackets(filename):
     return len(deque_skobka) == 0
 
 # Имя текстового файла с программой
-filename = 'alg2.txt'
+filename = 'isx.txt'
 # Имя файла для записи результатов
-output_filename = 'brackets_balance_result.txt'
+output_filename = 'result.txt'
 
 # Проверяем баланс скобок в файле
 result = check_brackets(filename)
