@@ -17,7 +17,7 @@ def reverse_file(input_file, output_file):
             file.write(line)  # Запись строки в новый файл
 
     # Вывод сообщения о завершении обработки файлов
-    print(f"Файл {input_file} был обработан. Результат записан в файл {output_file}.")
+    print(f"Файл {input_file} обработан. Результат записан в файл {output_file}.")
 
 
 # Пример использования функции
