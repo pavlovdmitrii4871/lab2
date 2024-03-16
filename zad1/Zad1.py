@@ -4,18 +4,18 @@ from deq_stack import Dequeue
 # Функция для извлечения наименьшего элемента из дека
 def pop_min(deq):
     # Извлекаем первый элемент из дека
-    min_element = deq.pop_first()
+    min = deq.pop_first()
     # Получаем длину дека
     l = len(deq)
     # Возвращаем наименьший элемент в дек
-    deq.push_last(min_element)
+    deq.push_last(min)
     
     # Перебираем все элементы в деке
     for _ in range(0, l):
         # Извлекаем первый элемент из дека
         el = deq.pop_first()
         # Сравниваем текущий элемент и наименьший элемент
-        min_element = min(el, min_element)
+        min = min(el, min)
         # Возвращаем элемент обратно в дек
         deq.push_last(el)
     
@@ -24,11 +24,11 @@ def pop_min(deq):
         # Извлекаем первый элемент из дека
         el = deq.pop_first()
         # Если элемент не является наименьшим элементом, возвращаем его обратно в дек
-        if el != min_element:
+        if el != min:
             deq.push_last(el)
     
     # Возвращаем наименьший элемент
-    return min_element
+    return min
 
 # Функция для сортировки книг
 def sort_books(books):
@@ -62,12 +62,12 @@ with open(input_file_path, 'r', encoding='utf-8') as file:
         books.append(line)
 
 # Сортируем книги
-sorted_books = sort_books(books)
+res = sort_books(books)
 
 # Выводим отсортированные названия книг на экран
 print("Отсортированные названия книг:")
-for _ in range(0, len(sorted_books)):
-    book = sorted_books.pop_last()
+for _ in range(0, len(res)):
+    book = res.pop_last()
     print(book)
 
 # Записываем отсортированные названия книг в отдельный файл
