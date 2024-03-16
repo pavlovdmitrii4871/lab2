@@ -22,7 +22,7 @@ def reverse_file(input_file, output_file):
 
 # Пример использования функции
 if name == "main":  # Если код выполняется как самостоятельный файл
-    input_file = "bukvi.txt"  # Путь к исходному файлу
-    output_file = "reverse.txt"  # Путь к новому файлу
+    input_file = "isx.txt"  # Путь к исходному файлу
+    output_file = "res.txt"  # Путь к новому файлу
 
     reverse_file(input_file, output_file)  # Вызов функции reverse_file для обработки файлов
