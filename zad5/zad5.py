@@ -1,34 +1,51 @@
+# Импортируем модуль Dequeue из файла deq_stack.py, который содержит реализацию дека (двусторонней очереди)
 from deq_stack import Dequeue
 
-
+# Функция check_brackets принимает в качестве аргумента имя текстового файла
 def check_brackets(filename):
-    deque_skobka = Dequeue()  # инициализация стека
+    # Инициализация дека для хранения скобок
+    deque_skobka = Dequeue()
+    
+    # Открытие файла на чтение
     with open(filename, 'r', encoding='utf-8') as file:
+        # Читаем файл построчно
         for line in file:
+            # Итерация по каждому символу в строке
             for char in line:
+                # Если символ - открывающая скобка '['
                 if char == '[':
-                    deque_skobka.push_last(char)  # добавляем открывающую скобку в стек
+                    # Добавляем открывающую скобку в дек
+                    deque_skobka.push_last(char)
+                # Если символ - закрывающая скобка ']'
                 elif char == ']':
-                    if not deque_skobka:  # если стек пуст, то скобка несбалансирована
+                    # Если дек пустой, то скобка несбалансирована
+                    if not deque_skobka:
                         return False
                     else:
-                        deque_skobka.pop_last()  # удаляем пару открывающей скобки из стека
+                        # Иначе, удаляем пару открывающей скобки из дека
+                        deque_skobka.pop_last()
+    
+    # Если после обработки файла дек оказался пустым, то все скобки сбалансированы
+    return len(deque_skobka) == 0
 
-    return len(deque_skobka) == 0  # если стек пуст, то все скобки сбалансированы
-
-
-filename = 'alg2.txt'  # имя текстового файла с программой
+# Имя текстового файла с программой
+filename = 'alg2.txt'
+# Имя файла для записи результатов
 output_filename = 'brackets_balance_result.txt'
+
+# Проверяем баланс скобок в файле
 result = check_brackets(filename)
+
+# Если результат - True, то скобки сбалансированы, иначе - несбалансированы
 if result:
     print("Скобки сбалансированы")
 else:
     print("Скобки несбалансированы")
 
-# Открытие файла для записи
+# Открываем файл на запись
 with open(output_filename, 'w', encoding='utf-8') as output_file:
+    # Если результат - True, записываем "Скобки сбалансированы" в файл, иначе - "Скобки несбалансированы"
     if result:
         output_file.write("Скобки сбалансированы")
     else:
         output_file.write("Скобки несбалансированы")
-
