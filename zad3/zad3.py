@@ -42,27 +42,27 @@ def hanoi(n, source, target, auxiliary):
 
 
 # Создание трех стеков
-tower_a = Stack()
-tower_b = Stack()
-tower_c = Stack()
+stackl_a = Stack()
+stackl_b = Stack()
+stackl_c = Stack()
 
-# Чтение данных из файла и заполнение стека tower_a
+# Чтение данных из файла и заполнение стека stackl_a
 input_filename = 'disks.txt'
-output_filename = 'results.txt'
+output_filename = 'res.txt'
 with open(input_filename, "r") as file:
     disks = file.read().split()
 
 for disk in disks:
-    tower_a.push(disk)
+    stackl_a.push(disk)
 
 # Вызов функции hanoi для решения задачи
-hanoi(tower_a.size(), tower_a, tower_c, tower_b)
+hanoi(stackl_a.size(), stackl_a, stackl_c, stackl_b)
 
 # Запись результатов в файл
 with open(output_filename, "w") as file:
-    file.write("Стержень A: " + str(tower_a.items) + "\n")  # Запись содержимого стека tower_a в файл
-    file.write("Стержень B: " + str(tower_b.items) + "\n")  # Запись содержимого стека tower_b в файл
-    file.write("Стержень C: " + str(tower_c.items) + "\n")  # Запись содержимого стека tower_c в файл
+    file.write("Стержень A: " + str(stackl_a.items) + "\n")  # Запись содержимого стека stackl_a в файл
+    file.write("Стержень B: " + str(stackl_b.items) + "\n")  # Запись содержимого стека stackl_b в файл
+    file.write("Стержень C: " + str(stackl_c.items) + "\n")  # Запись содержимого стека stackl_c в файл
 
 # Вывод сообщения о завершении программы
 print(f"Результаты записаны в файл {output_filename}.")
