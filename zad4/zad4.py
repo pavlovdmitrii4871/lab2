@@ -31,7 +31,6 @@ def check_brackets(filename, output_filename):
 
     return balanced
 
-
 filename = 'isx.txt'  # имя текстового файла с программой
 output_filename = 'result.txt'  # имя файла для записи результата
 
