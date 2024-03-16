@@ -19,7 +19,7 @@ def decrypt_message(msg, deck):
 
 # Основная функция программы
 def main():
-    filename = "ABC.txt"  # Имя файла с зашифрованным сообщением
+    filename = "isx.txt"  # Имя файла с зашифрованным сообщением
     with open(filename, 'r') as file:
         encrypted_msg = file.read()  # Считываем зашифрованное сообщение из файла
     deck = Dequeue()  # Создаем экземпляр класса Dequeue
@@ -34,7 +34,7 @@ def main():
     print("Расшифрованное сообщение:")
     print(decrypted_msg)  # Выводим расшифрованное сообщение на экран
 
-    with open("decrypted.txt", 'w') as file:
+    with open("res.txt", 'w') as file:
         file.write(decrypted_msg)  # Записываем расшифрованное сообщение в файл
 
 if name == "main":
