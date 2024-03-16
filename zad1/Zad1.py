@@ -49,8 +49,8 @@ def sort_books(books):
     return sort_deq
 
 # Указываем путь к входному и выходному файлам
-input_file_path = "books.txt"
-output_file_path = "sorted_books.txt"
+input_file_path = "isx.txt"
+output_file_path = "res.txt"
 
 # Создаем пустой список для хранения названий книг
 books = []
