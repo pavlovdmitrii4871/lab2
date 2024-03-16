@@ -31,7 +31,7 @@ def main():
 
     decrypted_msg = decrypt_message(encrypted_msg, deck)  # Расшифровываем сообщение
 
-    print("Расшифрованное сообщение:")
+    print("Результат:")
     print(decrypted_msg)  # Выводим расшифрованное сообщение на экран
 
     with open("res.txt", 'w') as file:
