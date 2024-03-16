@@ -32,8 +32,8 @@ def check_brackets(filename, output_filename):
     return balanced
 
 
-filename = 'alg.txt'  # имя текстового файла с программой
-output_filename = 'brackets_balance_result.txt'  # имя файла для записи результата
+filename = 'isx.txt'  # имя текстового файла с программой
+output_filename = 'result.txt'  # имя файла для записи результата
 
 # Вызываем функцию check_brackets с указанными именами файлов и сохраняем результат в переменную result
 result = check_brackets(filename, output_filename)
