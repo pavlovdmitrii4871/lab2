@@ -65,7 +65,7 @@ with open(input_file_path, 'r', encoding='utf-8') as file:
 res = sort_books(books)
 
 # Выводим отсортированные названия книг на экран
-print("Отсортированные названия книг:")
+print("Отсортировка:")
 for _ in range(0, len(res)):
     book = res.pop_last()
     print(book)
@@ -76,4 +76,4 @@ with open(output_file_path, 'w', encoding='utf-8') as output_file:
         output_file.write(book)
 
 # Выводим сообщение о завершении программы и указываем путь к выходному файлу
-print("Результаты записаны в файл:", output_file_path)
+print("Результат записан в файл:", output_file_path)
